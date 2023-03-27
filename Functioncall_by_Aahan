@@ -1,0 +1,76 @@
+#include<stdio.h>
+int main()
+{
+    int count = 0;
+    int water = 12000;
+    int sugar = 12000;
+    int milk = 12000;
+    int coffeepowder = 12000;
+    float b;
+    // Display menu
+    printf("\t\tWelcome to the coffee machine!\n");
+    printf("~~~~~~~~~~~~~\n");
+    printf("1. Espresso\n");
+    printf("2. Latte\n");
+    printf("3. Cappuccino\n");
+    printf("-1.Exit\n");
+    printf("~~~~~~~~~~~~~\n");
+    while (1)
+    {
+        int n;
+        printf("Enter total number of orders:");
+        scanf("%d", &n);
+        if (n == -1)
+        {
+            return 0;
+        }
+        int arr[n];
+        int real = 0;
+        float total = 0;
+        int esp = 0, lat = 0, cap = 0;
+        for (int i = 0; i < n; i++)
+        {
+            int j = i;
+            printf("%d. ", j + 1);
+            scanf("%d", &arr[i]);
+
+            if (arr[i] == 1)
+            {
+                esp++;
+                total += 3.40;
+                real++;
+            }
+            else if (arr[i] == 2)
+            {
+                lat++;
+                real++;
+                total += 3.99;
+            }
+            else if (arr[i] == 3)
+            {
+                cap++;
+                real++;
+                total += 4.99;
+            }
+            else
+            {
+                printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+                printf("\tYOU HAVE ENTERED WRONG INPUT DO YOU WANT TO CONTINUE?\n");
+                printf("\t1 to continue/ 0 to checkout: ");
+                int ch;
+                scanf("%d", &ch); // Remove \n from format string
+                printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+                if (ch == 1)
+                {
+                    i--;
+                    continue;
+                }
+                else
+                {
+                    n--;
+                    i = n - 1;
+                }
+            }
+        }
+
+        printf("\n\n");
