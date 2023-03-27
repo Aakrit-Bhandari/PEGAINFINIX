@@ -1,0 +1,62 @@
+// Function to dispense coffee
+int Espresso(int *water, int *sugar, int *milk, int *coffeepowder, int esp)
+{
+    printf("\t \xf0\x9f\x91\xa8\xe2\x80\x8d\xf0\x9f\x8d\xb3\n - Perparing your %d Espresso\n", esp);
+    *water -= 200;
+    *sugar -= 200;
+    *milk -= 150;
+    *coffeepowder -= 120;
+    printf("\t Here is you Espresso enjoy \xf0\x9f\x8d\xb5\n");
+    printf("-------------------------------------------------------------------------\n");
+    return 0;
+}
+
+// Function to dispense milk
+int Latte(int *water, int *sugar, int *milk, int *coffeepowder, int lat)
+{
+    printf("\t \xf0\x9f\x91\xa8\xe2\x80\x8d\xf0\x9f\x8d\xb3\n - Perparing your %d Latte\n ", lat);
+    *water -= 200;
+    *sugar -= 200;
+    *milk -= 150;
+    *coffeepowder -= 120;
+    printf("\t Here is you Latte enjoy \xf0\x9f\x8d\xb5\n");
+    printf("-------------------------------------------------------------------------\n");
+    return 0;
+}
+
+// Function to dispense sugar
+int Cappuccino(int *water, int *sugar, int *milk, int *coffeepowder, int cap)
+{
+    printf("\t \xf0\x9f\x91\xa8\xe2\x80\x8d\xf0\x9f\x8d\xb3\n - Perparing your %d Cappuccino\n ", cap);
+    *water -= 200;
+    *sugar -= 200;
+    *milk -= 150;
+    *coffeepowder -= 120;
+    printf("\t Here is you Cappuccino enjoy \xf0\x9f\x8d\xb5\n");
+    printf("\n-------------------------------------------------------------------------\n");
+    return 0;
+}
+
+int sort(int arr[], int *size)
+{
+    int i, j, k;
+    for (i = 0; i < *size; i++)
+    {
+        for (j = i + 1; j < *size;)
+        {
+            if (arr[j] == arr[i])
+            {
+                for (k = j; k < *size; k++)
+                {
+                    arr[k] = arr[k + 1];
+                }
+                (*size)--;
+            }
+            else
+            {
+                j++;
+            }
+        }
+    }
+    return 0;
+}
