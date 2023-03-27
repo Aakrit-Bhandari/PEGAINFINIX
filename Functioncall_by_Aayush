@@ -1,0 +1,39 @@
+printf("You have ordered %d Espresso(s)\n", esp);
+        printf("You have ordered %d Latte(s)\n", lat);
+        printf("You have ordered %d Cappuccino(s)\n", cap);
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        printf("Total bill is $%.2f\n", total); // Use "%.2f" to print float with 2 decimal places
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        printf("Pay for %d orders:", real);
+        int giv;
+        scanf("%d", &giv);
+        if (giv < total)
+        {
+            printf("!!!Insufficient amount!!!\n");
+            printf("Pay again:");
+            scanf("%d", &giv);
+        }
+        sort(arr, &n);
+        int new_count = n;
+        for (int i = 0; i < new_count; i++)
+        {
+            switch (arr[i])
+            {
+            case 1:
+                Espresso(&water, &sugar, &milk, &coffeepowder, esp);
+                break;
+            case 2:
+                Latte(&water, &sugar, &milk, &coffeepowder, lat);
+                break;
+            case 3:
+                Cappuccino(&water, &sugar, &milk, &coffeepowder, cap);
+                break;
+            default:
+                break;
+            }
+        }
+        total = giv - total;
+        printf("Here is you remaining money: %f\n", total);
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    }
+}
