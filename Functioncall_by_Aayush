@@ -19,7 +19,8 @@ printf("You have ordered %d Espresso(s)\n", esp);
         {
             switch (arr[i])
             {
-            case 1:
+           
+           case 1:
                 Espresso(&water, &sugar, &milk, &coffeepowder, esp);
                 break;
             case 2:
