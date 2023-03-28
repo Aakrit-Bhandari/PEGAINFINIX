@@ -8,11 +8,11 @@ int main()
     int coffeepowder = 12000;
     float b;
     // Display menu
-    printf("\t\tWelcome to the coffee machine!\n");
+      printf("\t\tWelcome to the coffee machine!\n");
     printf("~~~~~~~~~~~~~\n");
-    printf("1. Espresso\n");
-    printf("2. Latte\n");
-    printf("3. Cappuccino\n");
+    printf("1. Espresso $3.40\n");
+    printf("2. Latte $3.99\n");
+    printf("3. Cappuccino $4.99\n");
     printf("-1.Exit\n");
     printf("~~~~~~~~~~~~~\n");
     while (1)
