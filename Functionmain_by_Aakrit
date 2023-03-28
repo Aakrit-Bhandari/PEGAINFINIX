@@ -37,7 +37,7 @@ int Cappuccino(int *water, int *sugar, int *milk, int *coffeepowder, int cap)
     return 0;
 }
 
-int sort(int arr[], int *size)
+int sort(int arr[] , int *size)
 {
     int i, j, k;
     for (i = 0; i < *size; i++)
